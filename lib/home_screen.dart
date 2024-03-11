@@ -17,45 +17,50 @@ class _Start_PageState extends State<Start_Page> {
       body: SafeArea(
         child: Stack(
           children: [
-            Image.asset('images/head.jpg'),
+            Center(child: Image.asset('images/head.jpg')),
             Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 70, left: 100),
-                  child: InkWell(
-                    onTap: () => Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => Login(),
-                        )),
-                    child: Container(
-                      width: 220,
-                      height: 60,
-                      decoration: BoxDecoration(
-                        color: Colors.blue,
-                        borderRadius: BorderRadius.circular(10),
-                        border: Border(),
-                      ),
-                      child: Center(
-                          child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            "Get's Start",
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 18),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 80),
+                      child: InkWell(
+                        onTap: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Login(),
+                            )),
+                        child: Container(
+                          width: 220,
+                          height: 60,
+                          decoration: BoxDecoration(
+                            color: Colors.blue,
+                            borderRadius: BorderRadius.circular(10),
+                            border: Border(),
                           ),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 20),
-                            child: Icon(Icons.arrow_forward,color: Colors.white,size: 30,),
-                          )
-                        ],
-                      )),
+                          child: Center(
+                              child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                "Get's Start",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 18),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 20),
+                                child: Icon(Icons.arrow_forward,color: Colors.white,size: 30,),
+                              )
+                            ],
+                          )),
+                        ),
+                      ),
                     ),
-                  ),
+                  ],
                 )
               ],
             )

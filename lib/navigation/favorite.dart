@@ -2,14 +2,14 @@
 
 import 'package:flutter/material.dart';
 
-class Nav extends StatefulWidget {
-  const Nav({super.key});
+class Fav extends StatefulWidget {
+  const Fav({super.key});
 
   @override
-  State<Nav> createState() => _NavState();
+  State<Fav> createState() => _FavState();
 }
 
-class _NavState extends State<Nav> {
+class _FavState extends State<Fav> {
   @override
   Widget build(BuildContext context) {
     return Scaffold();
