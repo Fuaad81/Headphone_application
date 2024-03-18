@@ -21,18 +21,14 @@ class _Home_pageState extends State<Home_page> {
           height: 40,
           child: TextFormField(
             decoration: InputDecoration(
-              prefixIcon: Icon(Icons.search_outlined),
-              hintText: 'Search..',
-              hintStyle: TextStyle(
-                fontSize: 19,
-                fontWeight: FontWeight.bold
-              ),
-              enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: Colors.blue,width: 2),
-                borderRadius: BorderRadius.all(Radius.circular(20),                
-                )
-              )
-            ),
+                prefixIcon: Icon(Icons.search_outlined),
+                hintText: 'Search..',
+                hintStyle: TextStyle(fontSize: 19, fontWeight: FontWeight.bold),
+                enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.blue, width: 2),
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(20),
+                    ))),
           ),
         ),
         actions: [
@@ -64,8 +60,8 @@ class _Home_pageState extends State<Home_page> {
                           ),
                           Padding(
                             padding: const EdgeInsets.only(left: 20),
-                            child: Text('Profile',
-                                style: TextStyle(fontSize: 18)),
+                            child:
+                                Text('Profile', style: TextStyle(fontSize: 18)),
                           )
                         ],
                       ),
@@ -73,7 +69,7 @@ class _Home_pageState extends State<Home_page> {
                   ),
                 ),
                 InkWell(
-                  child: Container(                    
+                  child: Container(
                     width: double.infinity,
                     height: 50,
                     child: Padding(
@@ -103,13 +99,13 @@ class _Home_pageState extends State<Home_page> {
                       child: Row(
                         children: [
                           Icon(
-                            Icons.save,
+                            Icons.shopping_cart_outlined,
                             size: 30,
                           ),
                           Padding(
                             padding: const EdgeInsets.only(left: 20),
                             child:
-                                Text('Saved', style: TextStyle(fontSize: 18)),
+                                Text('My Cart', style: TextStyle(fontSize: 18)),
                           )
                         ],
                       ),
@@ -130,8 +126,8 @@ class _Home_pageState extends State<Home_page> {
                           ),
                           Padding(
                             padding: const EdgeInsets.only(left: 20),
-                            child: Text('Profile',
-                                style: TextStyle(fontSize: 18)),
+                            child:
+                                Text('About', style: TextStyle(fontSize: 18)),
                           )
                         ],
                       ),
@@ -375,7 +371,7 @@ class _Home_pageState extends State<Home_page> {
                       ],
                     ),
                   ),
-                  //! image Sixth 
+                  //! image Sixth
                   Card(
                     child: Column(
                       children: [
@@ -420,7 +416,7 @@ class _Home_pageState extends State<Home_page> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  //! image Seventh 
+                  //! image Seventh
                   Card(
                     child: Column(
                       children: [

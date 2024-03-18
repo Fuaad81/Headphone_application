@@ -28,7 +28,7 @@ class _LoginState extends State<Login> {
             children: [
               Container(
                 width: double.infinity,
-                height: 500,
+                height: 450,
                 child: Image.asset(
                   'images/airpods.jpg',
                   fit: BoxFit.cover,
@@ -51,7 +51,7 @@ class _LoginState extends State<Login> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 500),
+                padding: const EdgeInsets.only(top: 380),
                 child: Container(
                   width: double.infinity,
                   height: 450,
@@ -217,7 +217,7 @@ class _LoginState extends State<Login> {
                         ],
                       ),
                         Padding(
-                          padding: const EdgeInsets.only(top: 20, left: 10,),
+                          padding: const EdgeInsets.only(left: 10,),
                           child: Row(
                             children: [
                               Text(
