@@ -1,6 +1,7 @@
 // ignore_for_file: camel_case_types, prefer_const_constructors, prefer_const_literals_to_create_immutables, sized_box_for_whitespace
 
 import 'package:flutter/material.dart';
+import 'package:headphone/Drawer/profile.dart';
 
 class Home_page extends StatefulWidget {
   const Home_page({super.key});
@@ -47,6 +48,11 @@ class _Home_pageState extends State<Home_page> {
             Column(
               children: [
                 InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context, MaterialPageRoute(
+                        builder: (context) => Profile(),));
+                  },
                   child: Container(
                     width: double.infinity,
                     height: 50,
@@ -68,7 +74,7 @@ class _Home_pageState extends State<Home_page> {
                     ),
                   ),
                 ),
-                InkWell(
+                InkWell(                  
                   child: Container(
                     width: double.infinity,
                     height: 50,
@@ -77,12 +83,12 @@ class _Home_pageState extends State<Home_page> {
                       child: Row(
                         children: [
                           Icon(
-                            Icons.settings,
+                            Icons.home_outlined,
                             size: 30,
                           ),
                           Padding(
                             padding: const EdgeInsets.only(left: 20),
-                            child: Text('Settings',
+                            child: Text('Home page',
                                 style: TextStyle(fontSize: 18)),
                           )
                         ],
@@ -121,13 +127,65 @@ class _Home_pageState extends State<Home_page> {
                       child: Row(
                         children: [
                           Icon(
-                            Icons.info_outline_rounded,
+                            Icons.favorite_border_outlined,
                             size: 30,
                           ),
                           Padding(
                             padding: const EdgeInsets.only(left: 20),
                             child:
-                                Text('About', style: TextStyle(fontSize: 18)),
+                                Text('Wishlist', style: TextStyle(fontSize: 18)),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                InkWell(
+                  onTap: () {
+                    
+                  },
+                  child: Container(
+                    width: double.infinity,
+                    height: 50,
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 20),
+                      child: Row(
+                        children: [
+                          Icon(
+                            Icons.call,
+                            size: 30,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 20),
+                            child:
+                                Text('Contact us', style: TextStyle(fontSize: 18)),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                Divider(
+                  height: 30,
+                  thickness: 2,
+                  color: Colors.black,
+                ),
+                InkWell(
+                  child: Container(
+                    width: double.infinity,
+                    height: 50,
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 20),
+                      child: Row(
+                        children: [
+                          Icon(
+                            Icons.info_outline,
+                            size: 30,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 20),
+                            child: Text('About',
+                                style: TextStyle(fontSize: 18)),
                           )
                         ],
                       ),
@@ -143,12 +201,12 @@ class _Home_pageState extends State<Home_page> {
                       child: Row(
                         children: [
                           Icon(
-                            Icons.feedback_outlined,
+                            Icons.logout_outlined,
                             size: 30,
                           ),
                           Padding(
                             padding: const EdgeInsets.only(left: 20),
-                            child: Text('Feedback',
+                            child: Text('Sign out',
                                 style: TextStyle(fontSize: 18)),
                           )
                         ],

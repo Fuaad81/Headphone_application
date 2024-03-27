@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:headphone/Home/home_pg.dart';
 import 'package:headphone/navigation/favorite.dart';
 import 'package:headphone/navigation/shopping_cart.dart';
+import 'package:crystal_navigation_bar/crystal_navigation_bar.dart';
+import 'package:flutter_iconly/flutter_iconly.dart';
 
 class Nav extends StatefulWidget {
   const Nav({super.key});
@@ -24,33 +26,44 @@ class _NavState extends State<Nav> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
-        items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.home_outlined,
-            ),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.favorite_border_outlined,),
-              label: 'Favorite'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.shopping_cart_outlined,),
-              label: 'Cart'),
-        ],
-        type: BottomNavigationBarType.shifting,
-        selectedItemColor: Colors.blue,
-        selectedLabelStyle: TextStyle(
-          fontWeight: FontWeight.bold,
-          fontSize: 20
-        ),
-        unselectedItemColor: Colors.black,
-        iconSize: 30,
-        currentIndex: index,
-        onTap: itemTap,
-      ),
+      extendBody: true,
       body: options.elementAt(index),
+      bottomNavigationBar: CrystalNavigationBar(
+        currentIndex: index,
+        // indicatorColor: Colors.white,
+        unselectedItemColor: Colors.white70,
+
+        backgroundColor: Colors.black.withOpacity(0.1),
+        // outlineBorderColor: Colors.black.withOpacity(0.1),
+        
+        onTap: itemTap,
+        items: [
+          /// Home
+          CrystalNavigationBarItem(
+            icon: IconlyBold.home,
+            unselectedIcon: IconlyLight.home,
+            selectedColor: Colors.blue,
+            unselectedColor: Colors.black
+          ),
+      
+          /// Favourite
+          CrystalNavigationBarItem(
+            icon: IconlyBold.heart,
+            unselectedIcon: IconlyLight.heart,
+            selectedColor: Colors.red,
+            unselectedColor: Colors.black
+          ),
+      
+          /// Add
+          CrystalNavigationBarItem(
+            icon: IconlyBold.profile,
+            unselectedIcon: IconlyLight.profile,
+            selectedColor: Colors.blue,
+            unselectedColor: Colors.black
+          ),            
+        ],
+      ),
+      
     );
   }
 }
